@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<body>
+		<p>{{pro}} <span></span></p>
+		<p>{{email}}</p>
+		<p>{{phone}}</p>
+		<p>{{com}}</p>
+		<p>{{chairman}}</p>
+		<p>{{exec}}</p>
+		<form method="POST" action="">
+			{% csrf_token %}
+			<div class="form">
+				<input
+					class="input-form"
+					id="form"
+					name="url"
+					placeholder="imprint url "
+				/>
+				<button class="btn" type="submit">Generate</button>
+			</div>
+		</form>
+	</body>
+</html>

@@ -1,0 +1,231 @@
+:root {
+  --primary-color:rgb(13, 13, 105);
+  --primary-color:rgb(3, 141, 3);
+  --secondary-color:rgb(5, 47, 185);
+  --secondary-color:rgba(17, 185, 5, 0.796);
+  --mainWhite-color:rgb(255, 255, 255);
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  top: 0;
+}
+
+body {
+  background-color: #f6f5f7;
+}
+
+.header-area {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header-area h4 {
+  color: var(--primary-color);
+  font-size: 3.4rem;
+  padding: 1rem;
+}
+
+.header-area p {
+  color: var(--primary-color);
+  font-size: 3.4rem;
+  padding: 1rem;
+}
+
+.form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+}
+
+.form input {
+  width: 400px;
+  height: 40px;
+  border-radius: 10px;
+  padding-left: 2rem;
+  border: 3px solid var(--primary-color);
+  padding: 10px;
+  outline: none;
+  color: #294035;
+}
+
+.form button {
+  height: 40px;
+  border-radius: 20px;
+  padding: .5rem 3rem;
+  border: 0px solid var(--primary-color);
+  stroke: none;
+  stroke-opacity: 0;
+  background-color: var(--primary-color);
+  color: var(--mainWhite-color);
+}
+
+.form button:hover {
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+  cursor: pointer;
+  background-color: var(--secondary-color);
+}
+
+.error {
+  padding: .1rem 3rem;
+  background-color: #f6acd79f;
+  color: var(--mainWhite-color);
+  width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.msg {
+  padding: .1rem 3rem;
+  background-color: #1b8104cf;
+  color: var(--mainWhite-color);
+  width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.box-area {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1.3rem;
+}
+
+.guides-area {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1.3rem;
+}
+
+.guides-area p {
+  font-size: 1.5rem;
+}
+
+.display-box {
+  width: 600px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: var(--mainWhite-color);
+  overflow-y: auto;
+  height: 350px;
+  padding: 10px 3rem;
+  margin-top: 25px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 10px;
+}
+
+.download-area {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 200px;
+}
+
+.d-btn {
+  background-color: #038d03;
+  color: var(--mainWhite-color);
+  padding: .5rem 1rem;
+  cursor: pointer;
+  border-radius: 10px;
+  border: 0px solid #038d03;
+}
+
+.d-btn:hover {
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+  cursor: pointer;
+  background-color: var(--secondary-color);
+}
+
+.r-btn {
+  background-color: #b70e30;
+  color: var(--mainWhite-color);
+  padding: .5rem 1rem;
+  cursor: pointer;
+  border-radius: 10px;
+  border: 0px solid #de180e;
+}
+
+.r-btn:hover {
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+  cursor: pointer;
+  background-color: #fd1443;
+}
+
+.tag-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.tag-name {
+  font-size: 1.5rem;
+  font-weight: 500;
+  font-variant: small-caps;
+  color: var(--primary-color);
+}
+
+.tag-value {
+  font-size: 1.5rem;
+}
+
+.footer-area {
+  bottom: 0;
+  position: relative;
+}
+
+.footer-area .copyright {
+  font-size: .8rem;
+  position: absolute;
+}
+
+@media screen and (max-width: 678px) {
+  .header-area p {
+    font-size: 2.5rem;
+  }
+  .display-box {
+    width: 100%;
+    margin-left: 12px;
+    margin-right: 12px;
+  }
+}
+/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Imprint Scrape</title>
+		{% load static %}
+		<link rel="stylesheet" href="{% static 'sass/styles.css' %}" />
+	</head>
+	<body>
+		<div class="guides-area">
+			<h1>Guidelines</h1>
+			<p>
+				1. To use the imprint Generator, upload the list of webiste in excel
+				sheet with <b> the links as the first Column.</b>
+			</p>
+			<p>2. Click on the <b> Generate button </b></p>
+			<p>
+				3. Wait until the page finishes loading, to download the
+				<b>Text files Click on the Download button</b>
+			</p>
+			<p>
+				4. After successful download, to upload new website sheet, click on the
+				<b>Delete Files button to remove previous files</b>
+			</p>
+			<p>
+				5. It is Advised to load <b>100</b> list to avoid unending loading of
+				the website., but if you have patience more can be uploaded
+			</p>
+			<p>
+				5. The download files contains the list of webiste visited successfuly
+				and scraped the imprint content numbered
+				<b>1 to the last row uploaded</b>
+			</p>
+			<p>5. Unsuccessful links are <b> skipped in the zip text files </b></p>
+		</div>
+
+        <div>
+
+            <a  style="margin-left:17px; text-decoration:none;"href="{% url 'home' %}" class="d-btn">Go Back<a>
+
+        </div>
+	</body>
+</html>

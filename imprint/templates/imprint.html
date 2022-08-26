@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Imprint Scrape</title>
+		 {% load static %}
+		<link rel="stylesheet" href="{% static 'sass/styles.css' %}" />
+		
+	</head>
+	<body>
+		<header>
+			<div class="header-area">
+				<p>Imprint - Generator</p>
+				<div>
+
+					<a  style="margin-left:17px; text-decoration:none;"href="{% url 'guides' %}" class="d-btn">Read guidlines<a>
+		
+				</div>
+			</div>
+		</header>
+		<div>
+			{% if error%}
+			<div class="error">
+				<h3>
+					{{error}}
+				</h3>
+			</div>
+			{% endif %}
+			{% if msg%}
+			<div class="msg">
+				<h3>
+					{{msg}}
+				</h3>
+			</div>
+			{% endif %}
+			<div class="box-area">
+				<form method="POST" action="" enctype="multipart/form-data">
+					{% csrf_token %}
+				<div class="form">
+					{% comment %} <input
+						class="input-form"
+						type="file"
+						id="form"
+						name="url"
+						placeholder="imprint url "
+					/>
+					<button class="btn">Generate</button>
+				</div> {% endcomment %}
+				<p>{{ form.non_field_errors }}</p>
+				<p>{{ form.docfile.label_tag }} {{ form.docfile.help_text }}</p>
+				<p>
+					{{ form.docfile.errors }}
+					{{ form.docfile }}
+				</p>
+				<div class="form">
+					<input
+					class="input-form"
+					type="file"
+					id="form"
+					name="docfile"
+					placeholder="imprint url "
+					/>
+					<button type='submit' class="btn">Generate</button>
+				</div>
+			</form>
+		</div>
+			
+			{% comment %} <div class="display-box">
+				<div class="tag-container">
+					{%if pro%}
+					<div>
+						<p class="tag">{{pro}}</p>
+					</div>
+					{%endif%}
+					{%if email%}
+					<div>
+						<p class="tag">{{email}}</p>
+					</div>
+					{%endif%}
+					{%if phone%}
+					<div>
+						<p class="tag">{{phone}}</p>
+					</div>
+					{%endif%}
+					{%if fax%}
+					<div>
+						<p class="tag">{{fax}}</p>
+					</div>
+					{%endif%}
+					{%if website%}
+					<div>
+						<p class="tag">{{website}}</p>
+					</div>
+					{%endif%}
+					{%if com%}
+					<div>
+						<p class="tag">{{com}}</p>
+					</div>
+					{%endif%}
+					{%if chairman%}
+					<div>
+						<p class="tag">{{chairman}}</p>
+					</div>
+					{%endif%}
+					{%if exec%}
+					<div>
+						<p class="tag">{{exec}}</p>
+					</div>
+					{%endif%}
+					{%if vat%}
+					<div>
+						<p class="tag">{{vat}}</p>
+					</div>
+					{%endif%}
+				</div>
+			</div> {% endcomment %}
+			<div class="download-area">
+				<div>
+					<img  height="30px" width="40px" src="{% static 'download.jpg'%}" alt="excel"/>
+				</div>
+				<div>
+
+					<a  style="margin-left:17px; text-decoration:none;"href="{% url 'download' %}" class="d-btn">Download<a>
+		
+				</div>
+				<div>
+
+					<a  style="margin-left:17px; text-decoration:none;"href="{% url 'remove' %}" class="r-btn">Delete Files<a>
+		
+				</div>
+
+			</div>
+		</div>
+		<footer>
+			<div class="footer-area">
+				<p class="copyright">
+					&copy; <p class="date"></p> SuperLax Technologies
+				</p>
+			</div>
+		</footer>
+
+		<script>
+			var n = new Date();
+			let el = document.getElementsByClassName("date");
+			console.log(el);
+			el.textContent = n.getFullYear();
+		</script>
+	</body>
+</html>
