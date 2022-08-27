@@ -209,13 +209,13 @@ body {
 }
 
 .footer-area {
-  bottom: 0;
-  position: relative;
+  position: fixed;
+  top: 90%;
+  left: 5%;
 }
 
-.footer-area .copyright {
-  font-size: .8rem;
-  position: absolute;
+.copyright {
+  font-size: xx-small;
 }
 
 @media screen and (max-width: 678px) {
